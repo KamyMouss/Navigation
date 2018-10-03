@@ -8,11 +8,13 @@ import lejos.hardware.ev3.LocalEV3;
 import lejos.hardware.lcd.TextLCD;
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
 import lejos.hardware.port.Port;
-import lejos.hardware.sensor.EV3ColorSensor;
 import lejos.hardware.sensor.EV3UltrasonicSensor;
 import lejos.hardware.sensor.SensorModes;
 import lejos.robotics.SampleProvider;
 
+/**
+ * This is the main class that sets up the robot, and starts navigation.
+ */
 public class Lab3 {
 	
   // Route of the robot
@@ -29,8 +31,6 @@ public class Lab3 {
   public static final double TRACK = 12.075 ;
 
   public static void main(String[] args) throws OdometerExceptions {
-
-    int buttonChoice;
 
     // Odometer related objects
     Odometer odometer = Odometer.getOdometer(leftMotor, rightMotor, TRACK, WHEEL_RAD); // Complete implementation
